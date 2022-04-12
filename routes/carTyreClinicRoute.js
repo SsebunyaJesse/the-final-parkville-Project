@@ -7,11 +7,6 @@ router.use(expressValidator())
 //requiring the model/schema of carTyreClinic
 const CarTyreClinic = require('../models/carTyreClinicModel')
 
-//accessing the carTyreClinic page
-// router.get('/',(req, res)=>{
-// // we are rendering the login pug file
-//     res.render('carTyreClinic')
-// });
 router.get('/',async(req, res)=>{
     try{
         const data = await cartyreclinics.find({});
