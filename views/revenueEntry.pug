@@ -1,0 +1,31 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", type="text/css", href="/css/revenueEntrycss.css")
+title Revenue Report
+.center
+  h1 Revenue Report
+  form#form(action="/revenueEntry", name="entryForm", method="POST", onsubmit="return validate()")
+    .txt-field
+      input#cartyresectionrevenue(type="text", name="cartyresectionrevenue")
+      span
+      label#label-cartyresectionrevenue(for="cartyresectionrevenue")  Car Tyre Section Revenue
+      //- .text-danger#rcartyresectionrevenue
+    .txt-field
+      input#batterysectionrevenue(type="text", name="batterysectionrevenue")
+      span
+      label#label-batterysectionrevenue(for="batterysectionrevenue") Battery Section Revenue
+      //- .text-danger#rbatterysectionrevenue
+    .txt-field
+      input#parkingsectionrevenue(type="text", name="parkingsectionrevenue")
+      span
+      label#label-parkingsectionrevenue(for="parkingsectionrevenue") Parking Section Revenue
+      //- .text-danger#rparkingsectionrevenue
+    .txt-field
+      input#totalrevenue(type="text", name="totalrevenue")
+      span
+      label#label-totalrevenue(for="totalrevenue") Total Revenue
+      //- .text-danger#rtotalrevenue
+    .submit
+      input(type="submit", name="submit", value="submit")
+script(src="/validation/revenueEntryValidate.js")

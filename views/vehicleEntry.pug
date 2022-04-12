@@ -1,0 +1,73 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", type="text/css", href="/css/vehicleEntry.css")
+title Vehicle Register
+img.logo(src="/images/parkvillegif2.gif")
+.center
+  h1 Car Registration
+  form#form(name="entryForm", action="/vehicleEntry", method="POST", onsubmit="return validate()")
+    .v-category
+      label#label-category(for="category") Select the Category:
+      select#select(name="category")
+        option(value="default", selected) Categories
+        option(value="truck") Truck
+        option(value="personalCar") Personal Car
+        option(value="taxi") Taxi
+        option(value="coaster") Coaster
+        option(value="bodaboda") Bodaboda
+    .duration
+      label#label-duration(for="duration") Parking Time:
+      select#select(name="category2")
+        option(value="default", selected) Durations
+        option(value="day") Day
+        option(value="night") Night
+        option(value="less-than-3hours") less than 3 hours
+    .txt-field
+      input#nin(type="text", name="nin")
+      span
+      label#label-nin(for="nin") NIN if bodabodas
+      .text-danger#vnin
+    .txt-field
+      input#driversname(type="text", name="driversname")
+      span
+      label#label-driversname(for="driversname") Driver's Name
+      .text-danger#vdriversname
+    .txt-field
+      input#phonenumber(type="text", name="phonenumber")
+      span
+      label#label-phonenumber(for="phonenumber") Phone Number
+      .text-danger#vphonenumber
+    .txt-field
+      input#numberplate(type="text", name="numberplate")
+      span
+      label#label-numberplate(for="numberplate") Number Plate
+      .text-danger#vnumberplate
+    .txt-field
+      input#color(type="text", name="color")
+      span
+      label#label-color(for="color") Color
+      .text-danger#vcolor
+    .txt-field
+      input#arrivaltime(type="text", name="arrivaltime")
+      span
+      label#label-arrivaltime(for="arrivaltime") Arrival Time
+      .text-danger#varrivaltime
+    .txt-field
+      input#date(type="text", name="date")
+      span
+      label#label-date(for="date") Date
+      //- .text-danger#vdate
+    .txt-field
+      input#model(type="text", name="model")
+      span
+      label#label-model(for="model") Model
+      .text-danger#vmodel
+    .txt-field
+      input#charge(type="text", name="charge")
+      span
+      label#label-charge(for="charge") Charge
+      .text-danger#vcharge
+    .submit
+      input(type="submit", name="submit", value="Register")
+script(src="/validation/vehicleEntryValidate.js")
